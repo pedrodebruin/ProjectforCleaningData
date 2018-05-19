@@ -1,6 +1,4 @@
 
-setwd("/home/pedro/Documents/Industry/R-Programming")
-
 # Getting and Cleaning Data Course Project
 # 
 # The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. 
@@ -158,6 +156,8 @@ activitylabels <- read.table(paste0(unmergedpath,"/activity_labels.txt"))$V2
 tidyTable <- cbind(tidyTable, activity=activitylabels[df_activities$V1])
 tidyTable <- cbind(tidyTable, subject = df_subject$V1)
 
+write.table(tidyTable, "datasets/mergedUCI/tidyData.txt")
+
 ###################### Task 3 is now complete ########################
 
 
@@ -176,6 +176,6 @@ ds2 <- mutate(tidyTable, subject = as.factor(subject)) %>%
         summarise_all(funs(mean)) %>% 
         ungroup
 
-write.table(ds2, "datasets/mergedUCI/tidyTask5.txt)")
+write.table(ds2, "datasets/mergedUCI/tidyTask5.txt")
 ###################### Task 5 is now complete ########################
 

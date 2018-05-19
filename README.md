@@ -1,6 +1,10 @@
 # Getting and Cleaning Data Course Project
 
-# Assignment summary
+This is the repo for the course project of the _Getting and Cleaning data Coursera course_. 
+A review of the project assignment is below in _Assignment Summary_. 
+The entire project is executed via the 
+
+## Assignment Summary
 > The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. 
 > The goal is to prepare tidy data that can be used for later analysis. 
 > You will be graded by your peers on a series of yes/no questions related to the project. 
@@ -21,7 +25,7 @@
 >         
 >         https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 > 
-> You should create one R script called run_analysis.R that does the following.
+> You should create one R script called <i>run\_analysis.R</i> that does the following.
 > 
 > 1. Merges the training and the test sets to create one data set.
 > 2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -29,6 +33,22 @@
 > 4. Appropriately labels the data set with descriptive variable names.
 > 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-# Outline of run_analysis.R
+## The run\_analysis.R script
 
-# The code book
+Simply do source("run\_analysis.R") in Rstudio to download, clean and analyse the UCI HAR dataset 
+as outlined in the assignemnt summary. 
+
+The <i>run_analysis.R</i> script begins by setting up the folder structure and downloading the dataset.
+The input dataset files are not deleted at the end of the script, change this as desired.
+The 5 different tasks that comprise the course assignment are all handled by this single script.
+For easy review, I have divided the <i>run_analysis.R</i> script in blocks that indicate which code sections
+correspond to which tasks.
+
+The dataset and the output merged tables are written out to the _datasets_ folder. 
+Files containing the merged tables have <i>_merged</i> string in their name.
+All output files produced by the script are written to the _mergedUCI_ folder
+
+## The code book
+
+As part of the assignment, a code book is included in codebook.md that describes the tidy data 
+produced by the script above in greater detail.
