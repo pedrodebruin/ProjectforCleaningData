@@ -4,7 +4,7 @@
 
 Executing <i>run_analysis.R</i> will produce a tidy dataset located in the _datasets/mergedUCI_ folder, while the original 
 UCI HAR dataset will be downloaded to a folder called _UCI HAR Dataset_.
-Specifically, the tidy dataset asked in task 5 corresponds to the _datasets/mergedUCI/tidyTask5.txt_ file.
+*Specifically, the tidy dataset asked in task 5 corresponds to the _datasets/mergedUCI/tidyTask5.txt_ file.*
 
 ## The Raw Dataset
 
@@ -41,7 +41,7 @@ This folder contains the following files and folders:
 * X\_merged.txt: the table made from merging <i>train/X_train.txt</i> and <i>test/X_test.txt</i>. 
 * y\_merged.txt: the table made from merging <i>train/y_train.txt</i> and <i>test/y_test.txt</i>. 
 * tidyData.txt: the tidy version of <i>X_merged</i>, which also includes columns for activity and subject Only features related to std() and mean() are kept, as is asked in the project description
-* tidyTask5.txt the tidy data table asked for in task 5 of the project assignment, where the means of features are stored per subject and activity
+* tidyTask5.txt: the tidy data table asked for in task 5 of the project assignment, where the means of features are stored per subject and activity
 
 
 License:
