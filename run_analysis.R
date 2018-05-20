@@ -45,6 +45,7 @@ if (!file.exists(tp)) {
 unmergedpath = "datasets/UCI HAR Dataset"
 if (!dir.exists(unmergedpath)) {
         unzip(tp, exdir = "datasets")
+        unlink(x = "datasets/wearable.zip")
 }
 
 allFiles <- list.files(unmergedpath, full.names = T, recursive = T)

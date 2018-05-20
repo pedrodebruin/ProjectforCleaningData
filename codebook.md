@@ -36,6 +36,13 @@ For more information about this dataset contact: activityrecognition@smartlab.ws
 
 The output tidy dataset is written out to the _datasets/mergedUCI_ folder.
 This folder contains the following files and folders:
+* Inertial Signals: similar to the <i>Inertial Signals</i> folder of the unmerged _UCI HAR Dataset_, but with files corresponding to merged tables
+* subject\_merged.txt: the subject table made from merging test/subject.txt and train/subject.txt
+* X\_merged.txt: the table made from merging <i>train/X_train.txt</i> and <i>test/X_test.txt</i>. 
+* y\_merged.txt: the table made from merging <i>train/y_train.txt</i> and <i>test/y_test.txt</i>. 
+* tidyData.txt: the tidy version of <i>X_merged</i>, which also includes columns for activity and subject Only features related to std() and mean() are kept, as is asked in the project description
+* tidyTask5.txt the tidy data table asked for in task 5 of the project assignment, where the means of features are stored per subject and activity
+
 
 License:
 ========
