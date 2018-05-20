@@ -4,7 +4,7 @@
 
 Executing <i>run_analysis.R</i> will produce a tidy dataset located in the _datasets/mergedUCI_ folder, while the original 
 UCI HAR dataset will be downloaded to a folder called _UCI HAR Dataset_.
-*Specifically, the tidy dataset asked in task 5 corresponds to the _datasets/mergedUCI/tidyTask5.txt_ file.*
+**Specifically, the tidy dataset asked in task 5 corresponds to the _datasets/mergedUCI/tidyTask5.txt_ file.**
 
 ## The Raw Dataset
 
