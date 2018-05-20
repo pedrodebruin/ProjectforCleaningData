@@ -45,8 +45,8 @@ if (!file.exists(tp)) {
 unmergedpath = "datasets/UCI HAR Dataset"
 if (!dir.exists(unmergedpath)) {
         unzip(tp, exdir = "datasets")
-        unlink(x = "datasets/wearable.zip")
 }
+unlink(x = "datasets/wearable.zip")
 
 allFiles <- list.files(unmergedpath, full.names = T, recursive = T)
 
@@ -78,13 +78,13 @@ i<-1
 mergedTables <- list()
 while (i <= length(testFiles)) {
         
-        # This merged all train and test files
+        # This merges all train and test files
+        # For example, the table corresponding to the merger of X_train.txt and X_test.txt can be accessed simply by mergedTables$X
         df_test <- read.table(testFiles[i])
         df_train <- read.table(trainFiles[i])
         mergedTables[[i]] <- rbind(df_test, df_train)
 
         # This block names the mergedTables list elements nice names
-        # For example, the table corresponding to the merger of X_train.txt and X_test.txt can be accessed simply by mergedTables$X
         tablename <- strsplit(testFiles[i],"/")[[1]]
         tablename <- tablename[length(tablename)]
         tablename <- gsub("_test.txt","", tablename)
@@ -115,7 +115,7 @@ while (i <= length(testFiles)) {
         i <- i+1   # Don't forget to iterate!
 }
 
-# Can retrieve the merged X_train.txt and X_test by simply doing mergedTables$X
+# After this block, can retrieve for example the merged X_train.txt and X_test by simply doing mergedTables$X
 
 ###################### Task 1 is now complete ########################
 
@@ -177,6 +177,6 @@ ds2 <- mutate(tidyTable, subject = as.factor(subject)) %>%
         summarise_all(funs(mean)) %>% 
         ungroup
 
-write.table(ds2, "datasets/mergedUCI/tidyTask5.txt")
+write.table(ds2, "datasets/mergedUCI/tidyTask5.txt", row.names = FALSE)
 ###################### Task 5 is now complete ########################
 
